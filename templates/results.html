@@ -1,0 +1,37 @@
+{% extends "template.html" %}
+{% block content %}
+    <h1>Welcome to Holland Code Online!</h1>
+    <input type="submit" value="Start Over" style="float: right">
+    <table>
+    <thead>
+        <tr>
+            <th width="200px" align="left"><strong>Attributes</strong></th>
+            <th width="100px" align="left"><strong>Score</strong></th>
+        </tr>
+    </thead>
+    <tr>
+        <td>Social</td>
+        <td>{{ soc }}</td>
+    </tr>
+    <tr>
+        <td>Enterprising</td>
+        <td>{{ enter }}</td>
+    </tr>
+    <tr>
+        <td>Conventional</td>
+        <td>{{ con }}</td>
+    </tr>
+    <tr>
+        <td>Realistic</td>
+        <td>{{ real }}</td>
+    </tr>
+    <tr>
+        <td>Investigative</td>
+        <td>{{ inv }}</td>
+    </tr>
+    <tr>
+        <td>Artistic</td>
+        <td>{{ art }}</td>
+    </tr>
+    </table>
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends "template.html" %}
+{% block content %}
+    <h1>Welcome to Holland Code Online!</h1>
+    <h3>What is your name?</h3>
+    <form method="post" action="/">
+        Username: <input type="text" name="username" value="{{
+            request.form.username }}">
+        <input type="submit" value="Login">
+    </form>
+{% endblock %}

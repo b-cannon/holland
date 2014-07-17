@@ -1,0 +1,116 @@
+{% extends "template.html" %}
+{% block content %}
+    <h1>Welcome to Holland Code Online!</h1>
+    <input type="submit" value="Start Over" style="float: right">
+    <body>
+    <div class="checkbox">
+        <form action="{{ url_for('add_conventional') }}" method="post">
+            <table>
+                <thead>
+                    <tr>
+                        <th width="300px">Are You:</th>
+                        <th>Check</th>
+                    </tr>
+                </thead>
+                <tr>
+                    <td>Well organized</td>
+                    <td><label><input type="checkbox" name="conventional_attr" value="edit">Yes</label></td>
+                </tr>
+                <tr>
+                    <td>Numerically inclined</td>
+                    <td><label><input type="checkbox" name="conventional_attr" value="edit">Yes</label></td>
+                </tr>
+                <tr>
+                    <td>Methodical</td>
+                    <td><label><input type="checkbox" name="conventional_attr" value="edit">Yes</label></td>
+                </tr>
+                <tr>
+                    <td>Efficient</td>
+                    <td><label><input type="checkbox" name="conventional_attr" value="edit">Yes</label></td>
+                </tr>
+                <tr>
+                    <td>Orderly</td>
+                    <td><label><input type="checkbox" name="conventional_attr" value="edit">Yes</label></td>
+                </tr>
+                <tr>
+                    <td>Structured</td>
+                    <td><label><input type="checkbox" name="conventional_attr" value="edit">Yes</label></td>
+                </tr>
+                <tr>
+                    <td>Ambitious</td>
+                    <td><label><input type="checkbox" name="conventional_attr" value="edit">Yes</label></td>
+                </tr>
+                <tr>
+                    <td>Persistent</td>
+                    <td><label><input type="checkbox" name="conventional_attr" value="edit">Yes</label></td>
+                </tr>
+                <tr>
+                    <td>Accurate</td>
+                    <td><label><input type="checkbox" name="conventional_attr" value="edit">Yes</label></td>
+                </tr>
+                <tr>
+                    <td>Conscientious</td>
+                    <td><label><input type="checkbox" name="conventional_attr" value="edit">Yes</label></td>
+                </tr>
+                <tr>
+                    <td>Practical/Thrifty</td>
+                    <td><label><input type="checkbox" name="conventional_attr" value="edit">Yes</label></td>
+                </tr>
+                <tr>
+                    <td>Polite/obedient</td>
+                    <td><label><input type="checkbox" name="conventional_attr" value="edit">Yes</label></td>
+                </tr>
+                <thead>
+                    <tr>
+                        <th width="300px">Can You:</th>
+                        <th>Check</th>
+                    </tr>
+                </thead>
+                <tr>
+                    <td>Work well in a system</td>
+                    <td><label><input type="checkbox" name="conventional_attr" value="edit">Yes</label></td>
+                </tr>
+                <tr>
+                    <td>Do paperwork quickly</td>
+                    <td><label><input type="checkbox" name="conventional_attr" value="edit">Yes</label></td>
+                </tr>
+                <tr>
+                    <td>Keep accurate records</td>
+                    <td><label><input type="checkbox" name="conventional_attr" value="edit">Yes</label></td>
+                </tr>
+                <tr>
+                    <td>Use a computer</td>
+                    <td><label><input type="checkbox" name="conventional_attr" value="edit">Yes</label></td>
+                </tr>
+                <tr>
+                    <td>Write effective letters</td>
+                    <td><label><input type="checkbox" name="conventional_attr" value="edit">Yes</label></td>
+                </tr>
+                <thead>
+                    <tr>
+                        <th width="300px">Do you like to:</th>
+                        <th>Check</th>
+                    </tr>
+                </thead>
+                <tr>
+                    <td>Work with numbers</td>
+                    <td><label><input type="checkbox" name="conventional_attr" value="edit">Yes</label></td>
+                </tr>
+                <tr>
+                    <td>Be responsible for details</td>
+                    <td><label><input type="checkbox" name="conventional_attr" value="edit">Yes</label></td>
+                </tr>
+                <tr>
+                    <td>Collect/organize items</td>
+                    <td><label><input type="checkbox" name="conventional_attr" value="edit">Yes</label></td>
+                </tr>
+                <tr>
+                    <td>Follow procedures</td>
+                    <td><label><input type="checkbox" name="conventional_attr" value="edit">Yes</label></td>
+                </tr>
+            </table>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    </body>
+{% endblock %}

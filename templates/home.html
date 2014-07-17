@@ -1,0 +1,18 @@
+{% extends "template.html" %}
+{% block content %}
+    <h1>Welcome to Holland Code Online!</h1>
+    {% if name %}
+        <h2>Hello {{ name }}</h2>
+    {% endif %}
+    <body>
+    <div>
+        Knowing your personality type may give you clues about your interests,
+        qualities, skills and talents and how they can be applied to certain careers
+        or industries. Dr. John Holland theorized that an individual can be categorized
+        into one of the six groups: Social, Enterprising, Conventional, Realistic,
+        Investigative, and Artistic.  In the following pages, check all of the words that best
+        describe you to find out which group fits you!
+    </div>
+    <h2><a href="{{ url_for('social') }}">Begin</a> </h2>
+    </body>
+{% endblock %}
