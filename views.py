@@ -12,34 +12,36 @@ def login_required(test):
             return test(*args, **kwargs)
         else:
             flash('You need to enter your name')
-            return redirect(url_for('greeting'))
+            return redirect(url_for('home'))
     return wrap
 
-@app.route('/logout/', methods=['GET', 'POST'])
+#removed method=get, post
+@app.route('/logout')
 def logout():
     session.pop('logged_in', None)
     #flash('Bye!')
-    return redirect(url_for('greeting'))
+    return redirect(url_for('home'))
 
 @app.route('/', methods=['GET', 'POST'])
-def greeting():
+@app.route('/home/', methods=['GET', 'POST'])
+def home():
     error = None
     if request.method == 'POST':
         if request.form['username']:
             session['logged_in'] = True
             session['username'] = request.form['username']
-            return redirect(url_for('home'))
+            return redirect(url_for('social'))
         else:
             error = 'You must enter your name'
-    return render_template('greeting.html', error=error)
+    return render_template('home.html', error=error)
 
 #*****************PAGES***************************
-@app.route('/home/', methods=['GET', 'POST'])
+#@app.route('/home/', methods=['GET', 'POST'])
 #@app.route('/home/<name>')
-@login_required
-def home():
-    name = session['username']
-    return render_template('home.html', name=name)
+#@login_required
+#def home():
+#    name = session['username']
+#    return render_template('home.html', name=name)
 
 #Social page 1st
 @app.route('/social/', methods=['GET', 'POST'])

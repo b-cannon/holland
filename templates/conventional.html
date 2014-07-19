@@ -1,7 +1,7 @@
 {% extends "template.html" %}
 {% block content %}
     <h1>Welcome to Holland Code Online!</h1>
-    <input type="submit" value="Start Over" style="float: right">
+    <a href="/logout" style="float: right">Start Over</a>
     <body>
     <div class="checkbox">
         <form action="{{ url_for('add_conventional') }}" method="post">

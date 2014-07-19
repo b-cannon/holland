@@ -1,7 +1,12 @@
 {% extends "template.html" %}
 {% block content %}
     <h1>Welcome to Holland Code Online!</h1>
+    <a href="/logout" style="float: right">Start Over</a>
+    <!-----------
+    <form action="{{ 'logout' }}" method="post">
     <input type="submit" value="Start Over" style="float: right">
+    </form>
+    ----------->
     <!----
     <h3>Social Attributes:</h3>
     {% for s in social_list %}

@@ -1,8 +1,13 @@
 {% extends "template.html" %}
 {% block content %}
+    <a href="{{ url_for('home') }}">
     <h1>Welcome to Holland Code Online!</h1>
-    <input type="submit" value="Start Over" style="float: right">
+        </a>
+    <a href="/logout" style="float: right">Start Over</a>
     <div class="text">
+    Nice job {{ name }}!
+        <br>
+        <br>
     The following personality types can be helpful when searching for a potential career
     Based on your answers, your top three personality types are:
     <ol>
