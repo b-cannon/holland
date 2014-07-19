@@ -5,6 +5,7 @@ from functools import wraps
 app = Flask(__name__)
 app.config.from_object('config')
 
+
 def login_required(test):
     @wraps(test)
     def wrap(*args, **kwargs):
