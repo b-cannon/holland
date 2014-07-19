@@ -149,7 +149,8 @@ def add_artistic():
 #****************************************************************
 
 
-##RESULTS
+##RESULTS returns the totals from each page, and gets
+#the 3 highest
 @app.route('/results/', methods=['GET', 'POST'])
 @login_required
 def results():
@@ -160,7 +161,25 @@ def results():
     real = session['realistic']
     inv = session['investigative']
     art = session['artistic']
+
+    attr_tuples = [
+        ('Social', soc),
+        ('Enterprising', enter),
+        ('Conventional', con),
+        ('Realistic', real),
+        ('Investigative', inv),
+        ('Artistic', art)
+    ]
+    attr_tuples = sorted(attr_tuples, key=lambda attr: attr[1], reverse=True)
+    first = attr_tuples[0][0]
+    second = attr_tuples[1][0]
+    third = attr_tuples[2][0]
+
+    if attr_tuples[2][1] == attr_tuples[3][1]:
+        third = "(tie) " + attr_tuples[2][0] + "/" + attr_tuples[3][0]
+
     return render_template('results.html', name=name, soc=soc, enter=enter, \
-                           con=con, real=real, inv=inv, art=art)
+                           con=con, real=real, inv=inv, art=art, first=first, second=second, \
+                           third=third)
 
 

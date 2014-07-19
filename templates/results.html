@@ -2,6 +2,18 @@
 {% block content %}
     <h1>Welcome to Holland Code Online!</h1>
     <input type="submit" value="Start Over" style="float: right">
+    <div class="text">
+    The following personality types can be helpful when searching for a potential career
+    Based on your answers, your top three personality types are:
+    <ol>
+        <li>{{ first }}</li>
+        <li>{{ second }}</li>
+        <li>{{ third }}</li>
+    </ol>
+    </div>
+    <div class="text">
+    Your total results are:
+    </div>
     <table>
     <thead>
         <tr>
@@ -34,4 +46,20 @@
         <td>{{ art }}</td>
     </tr>
     </table>
+    <br>
+    <br>
+    <div class="text">
+    So what next?  Here is some information from the website O*Net online.  You can search for
+    types of jobs based on your personality types.  Click the link below to start:
+    <a href="http://www.onetonline.org/find/descriptor/browse/Interests/" target="_blank">
+        O*Net Online
+    </a>
+    <br>
+    <br>
+    After you see some careers that may interest you, head over to the Occupational Outlook
+    Handbook, where you can do some research on these careers:
+    <a href="http://www.bls.gov/ooh/" target="_blank">
+        Occupational Outlook Handbook
+    </a>
+    </div>
 {% endblock %}
